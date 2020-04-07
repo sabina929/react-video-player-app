@@ -25,7 +25,7 @@ const themeLight = {
 }
 
 
-const VPlayer = props => {
+const VPlayer = ({match, history, location}) => {
     const videos = JSON.parse(document.querySelector('[name="videos"]').value);
 
     const [state, setState] = useState({
@@ -35,6 +35,23 @@ const VPlayer = props => {
         autoplay: false,
         nightMode: true
     })
+
+    useEffect(() => {
+        const videoId = match.params.activeVideo;
+        if (videoId !== undefined) {
+            const newActiveVideo = state.videos.findIndex(video => video.id === videoId)
+            setState(prev => ({
+                ...prev,
+                activeVideo: prev.videos[newActiveVideo],
+                autoplay:location.autoplay
+            }))
+        } else {
+            history.push({
+                pathname: `/${state.activeVideo.id}`,
+                autoplay: false
+            })
+        }
+    }, [history, location.autoplay, match.params.activeVideo, state.activeVideo.id, state.videos])
 
     const nightModeCallback = () => {}
     const endCallback = () => {}
