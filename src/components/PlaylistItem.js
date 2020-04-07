@@ -9,7 +9,9 @@ const PlaylistItem = ({ video, active, played }) => {
   // </StyledPlaylistItem>
   return(
     <StyledPlaylistItem>
-      <div></div>
+      <div className="v-player__video-nr">{video.num}</div>
+      <div className="v-player__video-name">{video.title}</div>
+  <div className="v-player__video-time">{video.duration}</div>
     </StyledPlaylistItem>
   )
   };
