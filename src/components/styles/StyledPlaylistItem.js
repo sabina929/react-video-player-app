@@ -2,17 +2,13 @@ import styled from "styled-components";
 
 const StyledPlaylistItem = styled.div`
   font-family: Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background: none;
-  border: ${props => (props.active ? "2px dotted #696969" : "none")};
+  border: ${props => (props.active ? "2px dotted hsl(276, 24%, 36%)" : "none")};
   font-size: 1.6em;
   color: ${props => props.theme.color};
   min-height: 50px;
   padding: 10px 20px;
-  margin: 0 0 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin: 0 0 16px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,8 +21,8 @@ const StyledPlaylistItem = styled.div`
     display: ${props => (props.active || !props.played ? "none" : "block")};
     content: "";
     width: 10px;
-    min-height: 10px;
-    background: #409f4e;
+    height: 10px;
+    background: hsl(76, 76%, 50%);
     border-radius: 50px;
     position: absolute;
     left: 0;
@@ -34,15 +30,15 @@ const StyledPlaylistItem = styled.div`
   }
 
   .v-player__video-nr {
-    flex-grow: 1; /* default 0 */
+    flex-grow: 1;
     max-width: 30px;
     padding-right: 20px;
-    border-right: 2px solid #565656;
+    border-right: 2px solid hsl(276, 24%, 28%);
   }
 
   .v-player__video-name,
   .v-player__video-name a {
-    flex-grow: 10; /* default 0 */
+    flex-grow: 10;
     padding: 0 0 0 10px;
     color: ${props => props.theme.color};
     text-align: left;
@@ -51,7 +47,7 @@ const StyledPlaylistItem = styled.div`
   }
 
   .v-player__video-time {
-    background: #565656;
+    background: hsl(276, 24%, 28%);
     min-width: 45px;
     color: #fff;
     font-size: 0.8em;
@@ -63,13 +59,13 @@ const StyledPlaylistItem = styled.div`
   }
 
   .v-player__video-download {
-    flex-grow: 1; /* default 0 */
+    flex-grow: 1;
     color: ${props => (props.played ? "#fff" : props.theme.color)};
     margin: 0 0 0 20px;
     max-width: 30px;
     padding: 0 20px;
-    border-left: 2px solid #565656;
-    font-family: "fontello";
+    border-left: 2px solid hsl(276, 24%, 28%);
+    font-family: Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
   }

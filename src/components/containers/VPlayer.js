@@ -6,22 +6,22 @@ import StyledVPlayer from '../styles/StyledVPlayer'
 
 
 const themeDark = {
-    bgcolor: "#353535",
-    bgcolorItem: "#414141",
-    bgcolorItemActive: "#405c65",
-    bgcolorPlayed: "#5264de",
+    bgcolor: "hsl(276, 24%, 2%)",
+    bgcolorItem: "hsl(276, 24%, 12%)",
+    bgcolorItemActive: "hsl(276, 50%, 20%)",
+    bgcolorPlayed: "hsl(276, 56%, 50%)",
     border: "none",
     borderPlayed: "none",
-    color: "#ffffff"
+    color: "hsl(276, 24%, 96%)"
 }
 const themeLight = {
-    bgcolor: "#ffffff",
-    bgcolorItem: "#ffffff",
-    bgcolorItemActive: "#80a7b1",
-    bgcolorPlayed: "#7d9979",
-    border: "1px solid #353535",
+    bgcolor: "hsl(276, 24%, 96%)",
+    bgcolorItem: "hsl(276, 24%, 96%)",
+    bgcolorItemActive: "hsl(276, 50%, 60%)",
+    bgcolorPlayed: "hsl(276, 24%, 36%)",
+    border: "1px solid hsl(276, 24%, 2%)",
     borderPlayed: "none",
-    color: "#353535"
+    color: "hsl(276, 24%, 2%)"
 }
 
 
