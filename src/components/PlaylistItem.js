@@ -12,3 +12,4 @@ const PlaylistItem = ({ video, active, played }) => {
   };
 
 export default PlaylistItem;
+

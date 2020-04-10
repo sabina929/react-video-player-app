@@ -24,7 +24,6 @@ const StyledNightmode = styled.div`
     height: 0;
   }
 
-  /* The slider */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -62,7 +61,6 @@ const StyledNightmode = styled.div`
     background-color: hsl(76, 76%, 50%);
   }
 
-  /* Rounded sliders */
   .slider.round {
     border-radius: 30px;
   }

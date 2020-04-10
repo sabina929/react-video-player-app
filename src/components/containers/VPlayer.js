@@ -48,7 +48,7 @@ const VPlayer = ({match, history, location}) => {
             setState(prev => ({
                 ...prev,
                 activeVideo: prev.videos[newActiveVideo],
-                autoplay:location.autoplay
+                autoplay: location.autoplay
             }))
         } else {
             history.push({
@@ -87,7 +87,6 @@ const VPlayer = ({match, history, location}) => {
             //         return video.id === state.activeVideo.id ? {...video, played: true} : video;
             //     })
             // })
-
 
             // SECOND WAY
             const videos = [...state.videos];

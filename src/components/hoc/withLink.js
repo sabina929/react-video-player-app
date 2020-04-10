@@ -15,7 +15,6 @@ const withLink = WrappedComponent => props => {
             )
         }
     }
-
     return <WrappedComponent {...newProps} />
 }
 
